@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weather Lookup</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<main class="container">
+<h1>Weather Lookup</h1>
+
+
+<div class="search">
+<input id="cityInput" type="text" placeholder="Type a city (e.g. London)" />
+<button id="searchBtn">Search</button>
+</div>
+
+
+<section id="result" class="card hidden"></section>
+
+
+<section class="history">
+<h2>Search history</h2>
+<ul id="historyList"></ul>
+</section>
+
+
+<footer class="attribution">Powered by OpenWeatherMap</footer>
+</main>
+
+
+<script type="module" src="/src/app.js"></script>
+</body>
+</html>
