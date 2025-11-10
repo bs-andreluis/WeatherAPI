@@ -39,3 +39,32 @@ const arr = getHistory();
 historyList.innerHTML = arr.map(city => `<li data-city="${city}">${city}</li>`).join("");
 }
 renderHistory();
+
+
+//Handle search button click
+searchBtn.addEventListener("click", async () => {
+    const city = cityInput.value.trim();
+    if (!city) return;
+
+    try {
+        const data = await getCurrentWeather(city);
+        renderResult(data);
+        saveSearch(city);
+        renderHistory();
+    } catch (error) {
+        console.error("Error fetching weather data:", error);
+    }
+});
+
+
+// Allow clicking on history to search again
+historyList.addEventListener("click", (e) => {
+  const city = e.target.dataset.city;
+  if (!city) return;
+
+  cityInput.value = city;
+  searchBtn.click();
+});
+
+const data = await getCurrentWeather(city);
+console.log("API result:", data);

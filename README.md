@@ -10,7 +10,7 @@ A minimal, professional single-page app (vanilla JS) to lookup current weather u
 - Search weather by city name
 - Displays temperature, description, 'feels like' and humidity
 - Saves recent searches in `localStorage`
-- Minimal, responsive UI ready for portfolio
+- Responsive UI 
 
 
 ## Setup
