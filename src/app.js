@@ -65,6 +65,3 @@ historyList.addEventListener("click", (e) => {
   cityInput.value = city;
   searchBtn.click();
 });
-
-const data = await getCurrentWeather(city);
-console.log("API result:", data);
